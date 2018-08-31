@@ -1,0 +1,24 @@
+{
+  "name": "librelibras-client",
+  "description": "Libre-Libras VC",
+  "main": "",
+  "authors": [
+    "Sidney Sousa"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendors",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.7.3",
+    "ng-webcam": "^0.4.1",
+    "bootstrap": "^4.1.3",
+    "angular-route": "^1.7.3"
+  }
+}

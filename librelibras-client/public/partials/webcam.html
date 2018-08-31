@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 text-center">
+        <ng-webcam config="config" on-error="onError(err)" on-load="onLoad()" on-live="onLive()" on-capture-progress="onCaptureProgress(src, progress)"
+            on-capture-complete="onCaptureComplete(src)"></ng-webcam>
+        <div ng-show="showButtons">
+            <button class="btn btn-primary" type="button" ng-disabled="!captureButtonEnable" ng-click="capture()">Capturar</button>
+            <button class="btn btn-primary" type="button" ng-disabled="!cameraOn" ng-click="off()">Desligar camera</button>
+            <button class="btn btn-primary" type="button" ng-disabled="cameraOn" ng-click="on()">Ligar camera</button>
+        </div>
+        <span ng-show="showProgress">{{ progress }}</span>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
+<br>
+<div class="row" ng-show="sucesso">
+    <div class="col text-center">
+        <span class="alert alert-info">{{ resultado }}</span>
+    </div>
+</div>
+<div class="row" ng-show="erro">
+    <div class="col text-center">
+        <span class="alert alert-danger">{{ resultado }}</span>
+    </div>
+</div>
